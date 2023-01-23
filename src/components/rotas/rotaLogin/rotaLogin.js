@@ -19,31 +19,28 @@ export default function Login() {
     const nav = useNavigate()
     const { setLoggedUser } = useContext(UserContext)
     const [cliente, especifCliente] = useState({email: "", password: "", })
-    const [descadastrar, setDisabled] = useState(false)
+    const [descadastrar, especifDescadastrar] = useState(false)
 
     function cadastraTudo(param) {
         param.preventDefault()
-        setDisabled(true)
+        especifDescadastrar(true)
         axios.post("http://localhost:5000/cadastro", cliente)
         // Caso o usuário consiga se conectar, ele consegue ir para a prox página
-        axios.then((resp) => {
+        .then((resp) => {
                 window.localStorage.setItem("user", JSON.stringify(resp.data))
                 setLoggedUser(resp.data)
                 alert("Bem vindo " + resp.data.username)
                 nav("/home")
             })
-            .catch((err) => {
-                alert("Email ou senha incorretos! Tente novamente.")
+            .catch((error) => {
+                alert("Email e/ou senha estão errados")
                 limparTudo()
-                setDisabled(false)
+                especifDescadastrar(false)
             })
     }
 
     function limparTudo() {
-        especifCliente({
-            email: "",
-            password: "",
-        })
+        especifCliente({email: "", password: "",})
     }
 
     return (
@@ -51,19 +48,13 @@ export default function Login() {
         <Title>MyWallet</Title>
             <Form onSubmit={cadastraTudo}>
                 <Input
-                    name = "email"
-                    type = "text"
-                    placeholder = "E-mail"
-                    value={cliente.email}
+                    name = "email" type = "text" placeholder = "E-mail" value={cliente.email}
                     onChange={(param) => especifCliente({...cliente, email: param.target.value})}
                     descadastrar={descadastrar}
                     required
                 />
                 <Input
-                    name = "password"
-                    type = "password"
-                    placeholder = "Senha"
-                    value={cliente.password}
+                    name = "password" type = "password" placeholder = "Senha" value={cliente.password}
                     onChange={(param) =>
                         especifCliente({ ...cliente, password: param.target.value})
                     }
