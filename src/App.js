@@ -1,16 +1,16 @@
 // Bibliotecas de uso geral
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { useState } from "react"
-import UserContext from "../components/contexts/user.context"
+import UserContext from "./components/contexts/user.context"
 // import ResetStyle from "../assets/css/reset.styles"
-import GlobalStyle from "../assets/css/global.styles"
+import GlobalStyle from "./assets/css/global.styles"
 
 // Caminho das rotas dos componentes 
-import Login from "../components/rotas/rotaLogin/rotaLogin"
-import Cadastro from "../components/rotas/rotaCadastro/rotaCadastro"
-import Home from "../components/rotas/rotaHome/rotaHome"
-import NovaEntrada from "../components/rotas/rotaNovaEntrada/rotaNovaEntrada"
-import NovaSaida from "../components/rotas/rotaNovaSaida/rotaNovaSaida"
+import Login from "./components/rotas/rotaLogin/rotaLogin"
+import Cadastro from "./components/rotas/rotaCadastro/rotaCadastro"
+import Home from "./components/rotas/rotaHome/rotaHome"
+import NovaEntrada from "./components/rotas/rotaNovaEntrada/rotaNovaEntrada"
+import NovaSaida from "./components/rotas/rotaNovaSaida/rotaNovaSaida"
 
 export default function App() {
     // Criando um localStorage para armazenar os dados dos meus usuários
