@@ -1,5 +1,6 @@
-import Entries from "./Entries.block";
-import Exities from "./Exities.block";
+// Alguns funcções para controlar a entrada e saída dos valores selecionados
+import Entries from "./valorDeEntrada";
+import Exities from "./valorDeSaida";
 
 // Rotas das estilizações
 import Screen2 from "../componentsStyled/Screen2"
