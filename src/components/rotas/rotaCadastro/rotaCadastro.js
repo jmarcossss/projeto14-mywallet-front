@@ -4,6 +4,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import BeatLoader from "react-spinners/BeatLoader";
 
+import Input from "../../componentsStyled/Input"
+import Screen from "../../componentsStyled/Screen"
+import Title from "../../componentsStyled/Title"
+import Form from "../../componentsStyled/Form"
+import Button from "../../componentsStyled/Button"
+import SignIn from "../../componentsStyled/SignIn"
+
 export default function Cadastro() {
     const navigate = useNavigate();
 
@@ -107,75 +114,3 @@ export default function Cadastro() {
         </Screen>
     );
 }
-
-const Screen = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-`;
-
-const Title = styled.h1`
-    margin-bottom: 30px;
-
-    font-family: "Saira Stencil One", cursive;
-    font-size: 32px;
-    font-weight: 400;
-`;
-
-const Form = styled.form`
-    display: flex;
-    flex-direction: column;
-`;
-
-const Input = styled.input`
-    width: 326px;
-    height: 58px;
-    margin-bottom: 15px;
-    padding-left: 15px;
-
-    font-size: 20px;
-    outline: none;
-
-    border: none;
-    border-radius: 5px;
-
-    ::placeholder {
-        font-size: 20px;
-        font-weight: 400;
-    }
-`;
-
-const Button = styled.button`
-    width: 326px;
-    height: 46px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 20px;
-    font-weight: 700;
-    color: #ffffff;
-    text-align: center;
-
-    background-color: #a328d6;
-    border: none;
-    border-radius: 5px;
-
-    cursor: pointer;
-`;
-
-const SignIn = styled.p`
-    margin-top: 35px;
-
-    strong {
-        font-style: italic;
-        text-decoration: underline;
-    }
-`;

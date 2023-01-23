@@ -8,12 +8,12 @@ import UserContext from "../../contexts/user.context"
 import BeatLoader from "react-spinners/BeatLoader"
 
 // Importando os componentes do css do Login
-import Input from "./componentsLogin/Input"
-import Screen from "./componentsLogin/Screen"
-import Title from "./componentsLogin/Title"
-import Form from "./componentsLogin/Form"
-import Button from "./componentsLogin/Button"
-import SignUp from "./componentsLogin/SignUp"
+import Input from "../../componentsStyled/Input"
+import Screen from "../../componentsStyled/Screen"
+import Title from "../../componentsStyled/Title"
+import Form from "../../componentsStyled/Form"
+import Button from "../../componentsStyled/Button"
+import SignUp from "../../componentsStyled/SignUp"
 
 export default function Login() {
     const nav = useNavigate()
