@@ -9,19 +9,15 @@ import Desc from "../componentsStyled/Desc"
 import RightColumn from "../componentsStyled/RightColumn"
 import EntryValue from "../componentsStyled/EntryValue"
 
-export default function Entries({ type, date, value, description }) {
+export default function ValorDeEntrada({ /*type*/ date, value, description }) {
     return (
         <Screen3>
             <Entry>
                 <LeftColumn>
-                    <Date>{date}</Date>
-                    <Link to="/update-entry">
-                        <Desc>{description}</Desc>
-                    </Link>
+                    <Date> {date} </Date>
+                    <Link to="/update-entry"> <Desc>{description}</Desc> </Link>
                 </LeftColumn>
-                <RightColumn>
-                    <EntryValue>{"R$ " + value}</EntryValue>
-                </RightColumn>
+                <RightColumn> <EntryValue>{"R$ " + value}</EntryValue> </RightColumn>
             </Entry>
         </Screen3>
     );

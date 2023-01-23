@@ -1,6 +1,6 @@
-import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import axios from "axios";
 import BeatLoader from "react-spinners/BeatLoader";
 
 // Rotas das estilizações
@@ -20,7 +20,7 @@ export default function Cadastro() {
         especifDescadastrar(true);
         axios.post("http://localhost:5000/cadastro", cliente)
         .then((resp) => {
-                alert("Cadastro concluído! Agora faça o login.");
+                alert("Cadastro ok!");
                 nav("/");
             })
             .catch((error) => {
@@ -66,9 +66,7 @@ export default function Cadastro() {
                 />
                 <Button descadastrar={descadastrar}> {descadastrar ? <BeatLoader color="#FFFFFF" /> : "Cadastrar"}</Button>
             </Form>
-            <Link to="/">
-                <SignIn>Já tem uma conta?<strong> Entre agora!</strong></SignIn>
-            </Link>
+            <Link to="/"> <SignIn>Já tem uma conta?<strong> Entre agora!</strong></SignIn> </Link>
         </Screen>
     );
 }

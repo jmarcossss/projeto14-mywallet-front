@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 
+// Funções auxiliares
 import UserContext from "../contexts/user.context";
-import MovimentaConta from "../blocks/MovimentaConta";
+import MovimentaConta from "../auxiFuncoes/MovimentaConta";
 
 // Rotas das estilizações
 import Content from "../componentsStyled/Content"

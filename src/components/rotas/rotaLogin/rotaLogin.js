@@ -29,11 +29,12 @@ export default function Login() {
         .then((resp) => {
                 window.localStorage.setItem("user", JSON.stringify(resp.data))
                 setLoggedUser(resp.data)
-                alert("Bem vindo " + resp.data.username)
+                alert("Bem vindo  " + resp.data.username)
                 nav("/home")
             })
             .catch((error) => {
                 alert("Email e/ou senha estão errados")
+                // Limpar aquilo que o usuário digitou errado nos inputs e deixar o espaço livre novamente
                 limparTudo()
                 especifDescadastrar(false)
             })

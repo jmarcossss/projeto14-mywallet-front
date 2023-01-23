@@ -1,6 +1,6 @@
 // Alguns funcções para controlar a entrada e saída dos valores selecionados
-import Entries from "./valorDeEntrada";
-import Exities from "./valorDeSaida";
+import ValorDeEntrada from "./ValorDeEntrada"
+import ValorDeSaida from "./ValorDeSaida"
 
 // Rotas das estilizações
 import Screen2 from "../componentsStyled/Screen2"
@@ -26,13 +26,13 @@ export default function MovimentaConta({ movimentacoesDaConta }) {
                         movDaConta.type === "entry" 
                         ? 
                         (   // Valores que são recebidos como entrada
-                            <Entries
+                            <ValorDeEntrada
                                 key={containerDaConta} type={movDaConta.type} date={movDaConta.date} value={movDaConta.value} description={movDaConta.description}
                             />
                         ) 
                         : 
                         (   // Valores que são recebidos como saída
-                            <Exities
+                            <ValorDeSaida
                                 key={containerDaConta} type={movDaConta.type} date={movDaConta.date} value={movDaConta.value} description={movDaConta.description}
                             />
                         )
